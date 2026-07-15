@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BlueDepth Marine Group Ltd</title>
+  <title>BlueDepth Marine Group Ltd | Commercial Diving, Training & Marine Tourism in Rwanda</title>
+  <meta name="description" content="BlueDepth Marine Group Ltd delivers commercial diving services, professional PADI/SSI dive training, and marine tourism experiences from Kigali, Rwanda. Depth. Precision. Reliability." />
+  <meta property="og:title" content="BlueDepth Marine Group Ltd" />
+  <meta property="og:description" content="Commercial diving, professional dive training, and marine tourism in Kigali, Rwanda." />
+  <meta property="og:image" content="assets/hero-real.jpg" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- ========== SCROLL PROGRESS ========== -->
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- ========== NAVBAR ========== -->
 <header id="navbar">
@@ -22,13 +30,13 @@
     <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#team">Team</a>
       <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#safety">Safety & Quality</a>
-      <a href="#equipment">Equipment</a>
+      <a href="#work">Our Work</a>
+      <a href="#safety">Safety</a>
       <a href="#careers">Careers</a>
       <a href="#contact">Contact</a>
-      <a href="#portal" class="btn-nav">Client Portal</a>
+      <a href="https://wa.me/250788228943" target="_blank" rel="noopener" class="btn-nav">Book a Dive</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -39,52 +47,54 @@
 <!-- ========== HERO ========== -->
 <section id="home" class="hero">
   <div class="hero-video-bg">
-    <img src="assets/hero-bg.webp" alt="Divers underwater" class="hero-bg-img" onerror="this.style.display='none'" />
+    <img src="assets/hero-real.jpg" alt="BlueDepth diver in clear blue water, Rwanda" class="hero-bg-img" />
     <div class="hero-overlay"></div>
+    <div class="hero-bubbles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
     <div class="hero-waves">
       <svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="rgba(0,119,204,0.15)" d="M0,160L48,154.7C96,149,192,139,288,154.7C384,171,480,213,576,213.3C672,213,768,171,864,165.3C960,160,1056,192,1152,192C1248,192,1344,160,1392,144L1440,128L1440,320L0,320Z"/></svg>
     </div>
   </div>
   <div class="hero-content">
-    <div class="hero-badge">
-      <span class="pulse-dot"></span>
-      International Marine Excellence
-    </div>
+    <div class="hero-badge">Depth. Precision. Reliability.</div>
     <h1 class="hero-title">
       Diving Deeper Into<br/>
       <span class="gradient-text">Marine Excellence</span>
     </h1>
-    <p class="hero-subtitle">BlueDepth Marine Group delivers world-class underwater engineering, marine construction, and offshore services with uncompromising safety standards.</p>
+    <p class="hero-subtitle">BlueDepth Marine Group delivers world-class commercial diving, professional dive training, and marine tourism experiences, proudly based in Kigali, Rwanda.</p>
     <div class="hero-cta">
       <a href="#services" class="btn-primary">Explore Services</a>
-      <a href="#projects" class="btn-outline">View Projects</a>
+      <a href="#work" class="btn-outline">See Our Work</a>
     </div>
+  </div>
+</section>
+
+<!-- ========== STATS STRIP ========== -->
+<section class="stats-strip">
+  <div class="container">
     <div class="hero-stats">
       <div class="stat-item">
-        <span class="stat-num" data-target="250">0</span><span>+</span>
-        <span class="stat-label">Projects Completed</span>
+        <span class="stat-num" data-target="3">0</span><span></span>
+        <span class="stat-label">Co-Founders</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-num" data-target="15">0</span><span>+</span>
-        <span class="stat-label">Years Experience</span>
+        <span class="stat-num" data-target="18">0</span><span>+</span>
+        <span class="stat-label">Years Combined Experience</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-num" data-target="40">0</span><span>+</span>
-        <span class="stat-label">Expert Divers</span>
+        <span class="stat-num" data-target="3">0</span><span></span>
+        <span class="stat-label">Core Service Divisions</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-num" data-target="20">0</span><span>+</span>
-        <span class="stat-label">Countries Served</span>
+        <span class="stat-num" data-target="100">0</span><span>%</span>
+        <span class="stat-label">Safety-First Culture</span>
       </div>
     </div>
   </div>
-  <a href="#about" class="scroll-indicator">
-    <span>Scroll Down</span>
-    <div class="scroll-arrow">↓</div>
-  </a>
 </section>
 
 <!-- ========== ABOUT ========== -->
@@ -93,49 +103,73 @@
     <div class="about-grid">
       <div class="about-visual" data-aos="fade-right">
         <div class="about-img-stack">
-          <div class="about-img-card img-card-1">
-            <img src="assets/diver1.webp" alt="Professional divers underwater" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder blue-deep\'><svg width=60 height=60 viewBox=\'0 0 24 24\' fill=white><path d=\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z\'/></svg></div>'" />
+          <div class="about-img-card img-card-1 tilt">
+            <img src="assets/about-1.jpg" alt="BlueDepth divers preparing for a dive on Rwanda's waters" style="width:100%;height:100%;object-fit:cover" />
           </div>
-          <div class="about-img-card img-card-2">
-            <img src="assets/diver2.png" alt="Marine diver at surface" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder ocean\'><svg width=60 height=60 viewBox=\'0 0 24 24\' fill=white><path d=\'M17 8C8 10 5.9 16.17 3.82 19c-.2.3.31.65.61.39C5.45 18.28 7 17 9 17c3.1 0 4.05 1.54 4.9 2.93.83 1.34 1.57 2.57 4.1 2.57 3 0 4-1.5 4-3.5 0-4-4-10-5-11z\'/></svg></div>'" />
+          <div class="about-img-card img-card-2 tilt">
+            <img src="assets/about-2.jpg" alt="BlueDepth diver surfacing in clear water" style="width:100%;height:100%;object-fit:cover;object-position:top" />
           </div>
           <div class="about-badge-card">
             <div class="badge-icon">✦</div>
             <div class="badge-text">
-              <strong>ISO Certified</strong>
+              <strong>PADI / SSI Compliant</strong>
               <span>Safety First</span>
             </div>
           </div>
         </div>
       </div>
       <div class="about-content" data-aos="fade-left">
-        <div class="section-tag">About BlueDepth</div>
-        <h2 class="section-title">Leaders in Marine Engineering & Underwater Operations</h2>
-        <p class="section-text">BlueDepth Marine Group Ltd is an international-standard marine services company committed to delivering exceptional underwater engineering, construction, and inspection services. With over 15 years of experience, we combine cutting-edge technology with deep expertise.</p>
+        <h2 class="section-title">Rwanda's Dive Team for Commercial, Training & Tourism Work</h2>
+        <p class="section-text">BlueDepth Marine Group Ltd was founded by a team of three certified diving professionals committed to delivering safe, reliable, and professional marine services across Rwanda and beyond. We combine hands-on diving expertise with a genuine passion for the water, from working dives to teaching the next generation of certified divers.</p>
         <div class="about-features">
           <div class="feature-row">
-            <div class="feature-icon">🌊</div>
+            <div class="feature-icon">🛠️</div>
             <div>
-              <strong>Marine Construction</strong>
-              <p>Offshore structures, underwater pipelines, and coastal infrastructure.</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <div class="feature-icon">🔬</div>
-            <div>
-              <strong>Advanced Inspection</strong>
-              <p>ROV-assisted inspection, NDT, and structural integrity assessments.</p>
+              <strong>Commercial Diving Services</strong>
+              <p>Underwater inspection, marine & hydrographic surveys, and salvage & recovery operations.</p>
             </div>
           </div>
           <div class="feature-row">
             <div class="feature-icon">🎓</div>
             <div>
-              <strong>Marine Academy</strong>
-              <p>Professional training, certifications, and e-learning for marine professionals.</p>
+              <strong>Professional Dive Training</strong>
+              <p>PADI/SSI-aligned scuba courses, from Open Water to Divemaster and instructor development.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon">🌊</div>
+            <div>
+              <strong>Marine Tourism</strong>
+              <p>Recreational diving, snorkeling adventures, and guided excursions on Rwanda's inland waters.</p>
             </div>
           </div>
         </div>
         <a href="#services" class="btn-primary">Our Services →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEAM / LEADERSHIP ========== -->
+<section id="team" class="section team-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">Meet Our Managing Director</h2>
+      <p class="section-sub">The people behind BlueDepth's commitment to safety, professionalism, and excellence.</p>
+    </div>
+    <div class="team-grid" data-aos="fade-up">
+      <div class="team-card tilt">
+        <div class="team-avatar">TS</div>
+        <div class="team-body">
+          <h3>Tuyisenge Sulaiman</h3>
+          <span class="team-role">Managing Director &amp; Co-Founder</span>
+          <p>One of three founders of BlueDepth Marine Group Ltd, Sulaiman brings more than 18 years of experience in operations management, business leadership, and commercial diving. He holds a Bachelor's Degree in Economics and Management and an MBA in Accounting and Finance, alongside PADI Open Water, PADI Advanced Open Water, and Helmet Diver certifications, pairing strong business expertise with hands-on technical experience.</p>
+          <div class="team-badges">
+            <span class="cert-chip">PADI Open Water Diver</span>
+            <span class="cert-chip">PADI Advanced Open Water</span>
+            <span class="cert-chip">Helmet Diver</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -147,232 +181,247 @@
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">What We Do</div>
       <h2 class="section-title">Comprehensive Marine Services</h2>
-      <p class="section-sub">From underwater inspection to offshore construction — we deliver end-to-end marine solutions.</p>
+      <p class="section-sub">Delivering world-class diving and marine solutions with safety, professionalism, and excellence.</p>
     </div>
-    <div class="services-grid">
+    <div class="services-grid services-grid-3">
       <div class="service-card" data-aos="fade-up" data-delay="0">
         <div class="service-icon-wrap" style="background: linear-gradient(135deg,#001F4D,#003B8E)">
           <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
         </div>
-        <h3>Underwater Inspection</h3>
-        <p>Hull inspections, pipeline surveys, structural assessments using ROV and trained divers with NDT capabilities.</p>
-        <a href="#contact" class="service-link">Learn More →</a>
+        <h3>Commercial Diving Services</h3>
+        <ul class="service-list">
+          <li>Underwater Inspection</li>
+          <li>Marine &amp; Hydrographic Surveys</li>
+          <li>Offshore Diving Support</li>
+          <li>Salvage &amp; Recovery Operations</li>
+          <li>Underwater Photography &amp; Video Documentation</li>
+        </ul>
+        <a href="#contact" class="service-link">Enquire Now →</a>
       </div>
       <div class="service-card featured-card" data-aos="fade-up" data-delay="100">
         <div class="featured-ribbon">Popular</div>
         <div class="service-icon-wrap" style="background: linear-gradient(135deg,#0077CC,#5BC0EB)">
-          <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
-        </div>
-        <h3>Marine Construction</h3>
-        <p>Offshore platform installation, underwater foundation work, piling, dredging, and coastal engineering projects.</p>
-        <a href="#contact" class="service-link">Learn More →</a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="200">
-        <div class="service-icon-wrap" style="background: linear-gradient(135deg,#003B8E,#0077CC)">
           <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18V17h2v-4.82L9 13.4V17h2v-2.6l1 .54 7-3.76L22 9 12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9z"/></svg>
         </div>
-        <h3>Salvage & Recovery</h3>
-        <p>Ship salvage, wreck recovery, cargo retrieval, and emergency response for maritime incidents.</p>
-        <a href="#contact" class="service-link">Learn More →</a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="0">
-        <div class="service-icon-wrap" style="background: linear-gradient(135deg,#5BC0EB,#0077CC)">
-          <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V9h14v11z"/></svg>
-        </div>
-        <h3>Marine Academy</h3>
-        <p>Professional diving certifications, offshore safety training, and e-learning courses for marine personnel.</p>
-        <a href="#contact" class="service-link">Learn More →</a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="100">
-        <div class="service-icon-wrap" style="background: linear-gradient(135deg,#001F4D,#5BC0EB)">
-          <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-        </div>
-        <h3>Safety & Consultancy</h3>
-        <p>HSE consultancy, risk assessments, safety audits, permit systems, and regulatory compliance services.</p>
-        <a href="#contact" class="service-link">Learn More →</a>
+        <h3>Professional Dive Training</h3>
+        <ul class="service-list">
+          <li>Scuba Diving Courses</li>
+          <li>Open Water &amp; Advanced Certifications</li>
+          <li>Rescue Diver Training</li>
+          <li>Divemaster &amp; Instructor Development</li>
+          <li>Corporate Water Safety Training</li>
+        </ul>
+        <a href="#contact" class="service-link">Enquire Now →</a>
       </div>
       <div class="service-card" data-aos="fade-up" data-delay="200">
-        <div class="service-icon-wrap" style="background: linear-gradient(135deg,#003B8E,#001F4D)">
-          <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M22 9V7h-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg>
+        <div class="service-icon-wrap" style="background: linear-gradient(135deg,#5BC0EB,#0077CC)">
+          <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
         </div>
-        <h3>Equipment Rental</h3>
-        <p>Diving equipment, ROVs, underwater cameras, decompression chambers, and offshore support vessels.</p>
-        <a href="#contact" class="service-link">Learn More →</a>
+        <h3>Marine Tourism</h3>
+        <ul class="service-list">
+          <li>Recreational Scuba Diving</li>
+          <li>Snorkeling Adventures</li>
+          <li>Guided Dive Tours</li>
+          <li>Underwater Photography Experiences</li>
+          <li>Marine Excursions</li>
+        </ul>
+        <a href="#contact" class="service-link">Enquire Now →</a>
+      </div>
+    </div>
+    <div class="services-footer" data-aos="fade-up">
+      <div class="services-footer-item">
+        <span class="sf-icon">🛡️</span>
+        <div><strong>Safety First</strong><span>Your safety is our top priority.</span></div>
+      </div>
+      <div class="services-footer-item">
+        <span class="sf-icon">👥</span>
+        <div><strong>Certified Professionals</strong><span>Skilled. Trained. Experienced.</span></div>
+      </div>
+      <div class="services-footer-item">
+        <span class="sf-icon">🌐</span>
+        <div><strong>International Standards</strong><span>PADI / SSI compliant &amp; industry best practices.</span></div>
+      </div>
+      <div class="services-footer-item">
+        <span class="sf-icon">⚓</span>
+        <div><strong>Reliable Marine Solutions</strong><span>Delivering quality solutions you can trust.</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== PROJECTS ========== -->
-<section id="projects" class="section projects-section">
+<!-- ========== OUR WORK ========== -->
+<section id="work" class="section projects-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
-      <div class="section-tag">Portfolio</div>
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-sub">Delivering excellence across oceans and coastlines worldwide.</p>
+      <h2 class="section-title">Our Work in Action</h2>
+      <p class="section-sub">Real dives, real training, real people: a look at BlueDepth in action across Rwanda's waters.</p>
     </div>
     <div class="projects-filter" data-aos="fade-up">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="construction">Construction</button>
-      <button class="filter-btn" data-filter="inspection">Inspection</button>
-      <button class="filter-btn" data-filter="salvage">Salvage</button>
+      <button class="filter-btn" data-filter="commercial">Commercial Diving</button>
+      <button class="filter-btn" data-filter="training">Dive Training</button>
+      <button class="filter-btn" data-filter="tourism">Marine Tourism</button>
     </div>
     <div class="projects-grid">
-      <div class="project-card" data-category="construction" data-aos="zoom-in">
-        <div class="project-img" style="background: linear-gradient(135deg, #001F4D 0%, #0077CC 100%)">
-          <div class="project-overlay">
-            <a href="#contact" class="project-view-btn">View Details</a>
-          </div>
-          <div class="project-icon-bg">
-            <svg width="80" height="80" fill="rgba(255,255,255,0.2)" viewBox="0 0 24 24"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zm-8 9h18v2H2v-2zm14-9v7h3v-7h-3zM11 1L2 6v2h18V6L11 1z"/></svg>
-          </div>
+      <div class="project-card" data-category="commercial" data-aos="zoom-in">
+        <div class="project-img"><img src="assets/gallery-7.jpg" alt="Diver suited up on the dive support boat" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
         </div>
         <div class="project-info">
-          <span class="project-tag construction">Construction</span>
-          <h3>Offshore Platform Installation</h3>
-          <p>Deep-water platform foundation and installation for an oil & gas client in West Africa.</p>
-          <div class="project-meta">
-            <span>📍 Gulf of Guinea</span>
-            <span>📅 2023</span>
-          </div>
+          <span class="project-tag construction">Commercial Diving</span>
+          <h3>Ready for Deployment</h3>
+          <p>Suited up and ready aboard the dive support boat before a working dive.</p>
         </div>
       </div>
-      <div class="project-card" data-category="inspection" data-aos="zoom-in" style="--delay:0.1s">
-        <div class="project-img" style="background: linear-gradient(135deg, #003B8E 0%, #5BC0EB 100%)">
-          <div class="project-overlay">
-            <a href="#contact" class="project-view-btn">View Details</a>
-          </div>
-          <div class="project-icon-bg">
-            <svg width="80" height="80" fill="rgba(255,255,255,0.2)" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 100 6 3 3 0 000-6z"/></svg>
-          </div>
+      <div class="project-card" data-category="training" data-aos="zoom-in" style="--delay:0.1s">
+        <div class="project-img"><img src="assets/gallery-3.jpg" alt="Safety crew helping a diver fit their gear" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
         </div>
         <div class="project-info">
-          <span class="project-tag inspection">Inspection</span>
-          <h3>Pipeline Integrity Survey</h3>
-          <p>ROV-based inspection of 120km underwater gas pipeline network, full NDT reporting.</p>
-          <div class="project-meta">
-            <span>📍 North Sea</span>
-            <span>📅 2024</span>
-          </div>
+          <span class="project-tag inspection">Dive Training</span>
+          <h3>Supervised Gear Fitting</h3>
+          <p>Safety crew assist divers with equipment fitting before entering the water.</p>
         </div>
       </div>
-      <div class="project-card" data-category="salvage" data-aos="zoom-in" style="--delay:0.2s">
-        <div class="project-img" style="background: linear-gradient(135deg, #0077CC 0%, #001F4D 100%)">
-          <div class="project-overlay">
-            <a href="#contact" class="project-view-btn">View Details</a>
-          </div>
-          <div class="project-icon-bg">
-            <svg width="80" height="80" fill="rgba(255,255,255,0.2)" viewBox="0 0 24 24"><path d="M21 6.5l-4-4-7 7-3-3-4 4 7 7 11-11zm-18 8l4 4 3-3-4-4-3 3z"/></svg>
-          </div>
+      <div class="project-card" data-category="tourism" data-aos="zoom-in" style="--delay:0.2s">
+        <div class="project-img"><img src="assets/gallery-8.jpg" alt="Diver adjusting mask on an inflatable boat with green hills behind" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
         </div>
         <div class="project-info">
-          <span class="project-tag salvage">Salvage</span>
-          <h3>Vessel Salvage & Refloat</h3>
-          <p>Emergency salvage of a 180m cargo vessel grounded in shallow coastal waters.</p>
-          <div class="project-meta">
-            <span>📍 Red Sea</span>
-            <span>📅 2022</span>
-          </div>
+          <span class="project-tag salvage">Marine Tourism</span>
+          <h3>Scenic Dive Excursions</h3>
+          <p>Guided dives across Rwanda's beautiful inland waters.</p>
         </div>
       </div>
-      <div class="project-card" data-category="construction" data-aos="zoom-in" style="--delay:0.1s">
-        <div class="project-img" style="background: linear-gradient(135deg, #5BC0EB 0%, #003B8E 100%)">
-          <div class="project-overlay">
-            <a href="#contact" class="project-view-btn">View Details</a>
-          </div>
-          <div class="project-icon-bg">
-            <svg width="80" height="80" fill="rgba(255,255,255,0.2)" viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z"/></svg>
-          </div>
+      <div class="project-card" data-category="training" data-aos="zoom-in" style="--delay:0.1s">
+        <div class="project-img"><img src="assets/gallery-4.jpg" alt="Two divers shaking hands on the boat before a dive" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
         </div>
         <div class="project-info">
-          <span class="project-tag construction">Construction</span>
-          <h3>Port Infrastructure Development</h3>
-          <p>Underwater foundation works for jetty expansion and berth deepening project.</p>
-          <div class="project-meta">
-            <span>📍 Lagos, Nigeria</span>
-            <span>📅 2024</span>
-          </div>
+          <span class="project-tag inspection">Dive Training</span>
+          <h3>Dive Team Briefing</h3>
+          <p>Teamwork and communication before a dive. Safety starts on the surface.</p>
         </div>
       </div>
-      <div class="project-card" data-category="inspection" data-aos="zoom-in" style="--delay:0.2s">
-        <div class="project-img" style="background: linear-gradient(135deg, #001F4D 0%, #5BC0EB 100%)">
-          <div class="project-overlay">
-            <a href="#contact" class="project-view-btn">View Details</a>
-          </div>
-          <div class="project-icon-bg">
-            <svg width="80" height="80" fill="rgba(255,255,255,0.2)" viewBox="0 0 24 24"><path d="M19.5 3.5L18 2l-1.5 1.5L15 2l-1.5 1.5L12 2l-1.5 1.5L9 2 7.5 3.5 6 2 4.5 3.5 3 2v20l1.5-1.5L6 22l1.5-1.5L9 22l1.5-1.5L12 22l1.5-1.5L15 22l1.5-1.5L18 22l1.5-1.5L21 22V2l-1.5 1.5zM19 19.09H5V4.91h14v14.18zM6 15h12v2H6zm0-4h12v2H6zm0-4h12v2H6z"/></svg>
-          </div>
+      <div class="project-card" data-category="commercial" data-aos="zoom-in" style="--delay:0.2s">
+        <div class="project-img"><img src="assets/gallery-2.jpg" alt="Diver preparing fins on the boat" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
         </div>
         <div class="project-info">
-          <span class="project-tag inspection">Inspection</span>
-          <h3>Offshore Wind Farm Survey</h3>
-          <p>Monopile and scour protection inspection for 40-turbine offshore wind installation.</p>
-          <div class="project-meta">
-            <span>📍 Baltic Sea</span>
-            <span>📅 2023</span>
-          </div>
+          <span class="project-tag construction">Commercial Diving</span>
+          <h3>Gear-Up for Depth</h3>
+          <p>Full scuba setup and equipment checks ahead of a working dive.</p>
         </div>
       </div>
-      <div class="project-card" data-category="salvage" data-aos="zoom-in" style="--delay:0.3s">
-        <div class="project-img" style="background: linear-gradient(135deg, #003B8E 0%, #0077CC 100%)">
-          <div class="project-overlay">
-            <a href="#contact" class="project-view-btn">View Details</a>
-          </div>
-          <div class="project-icon-bg">
-            <svg width="80" height="80" fill="rgba(255,255,255,0.2)" viewBox="0 0 24 24"><path d="M20 4H4v2l8 5 8-5V4zm0 4.5l-8 5-8-5V20h16V8.5z"/></svg>
-          </div>
+      <div class="project-card" data-category="tourism" data-aos="zoom-in" style="--delay:0.3s">
+        <div class="project-img"><img src="assets/gallery-6.jpg" alt="Diver surfacing during a recreational dive" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
         </div>
         <div class="project-info">
-          <span class="project-tag salvage">Salvage</span>
-          <h3>Subsea Cargo Recovery</h3>
-          <p>Recovery of high-value cargo containers from a sunken vessel at 45m depth.</p>
-          <div class="project-meta">
-            <span>📍 Arabian Sea</span>
-            <span>📅 2022</span>
-          </div>
+          <span class="project-tag salvage">Marine Tourism</span>
+          <h3>In The Water</h3>
+          <p>A diver surfaces during a recreational dive session.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="commercial" data-aos="zoom-in">
+        <div class="project-img"><img src="assets/gallery-1.jpg" alt="Diver on the boat, ocean behind" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag construction">Commercial Diving</span>
+          <h3>Signal Check</h3>
+          <p>A quick hand-signal check before descent during a working dive.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="training" data-aos="zoom-in" style="--delay:0.1s">
+        <div class="project-img"><img src="assets/gallery-9.jpg" alt="Diver preparing gear on boat with green hills behind" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag inspection">Dive Training</span>
+          <h3>Dive Prep &amp; Signals</h3>
+          <p>Final preparation and equipment checks before descent.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="commercial" data-aos="zoom-in" style="--delay:0.2s">
+        <div class="project-img"><img src="assets/gallery-10.jpg" alt="Diver smiling on the dive support boat" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag construction">Commercial Diving</span>
+          <h3>Field Operations</h3>
+          <p>BlueDepth divers on-site for underwater working operations.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="training" data-aos="zoom-in" style="--delay:0.3s">
+        <div class="project-img"><img src="assets/gallery-5.jpg" alt="Close-up of diver adjusting fin" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag inspection">Dive Training</span>
+          <h3>Equipment Checks</h3>
+          <p>Careful inspection of gear ensures every dive is safe and effective.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="training" data-aos="zoom-in">
+        <div class="project-img"><img src="assets/training-1.jpg" alt="Diver smiling on the dive boat" loading="lazy" />
+          <div class="project-overlay"><span class="project-view-btn">🔍 View</span></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag inspection">Dive Training</span>
+          <h3>Team Training Day</h3>
+          <p>Ongoing training keeps our divers sharp and certification-ready.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ========== LIGHTBOX ========== -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">←</button>
+  <img src="" alt="" id="lightboxImg" />
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">→</button>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
 
 <!-- ========== SAFETY ========== -->
 <section id="safety" class="section safety-section">
   <div class="safety-bg"></div>
   <div class="container">
     <div class="section-header light" data-aos="fade-up">
-      <div class="section-tag light">Safety & Quality</div>
+      <div class="section-tag light">Safety &amp; Quality</div>
       <h2 class="section-title light">Safety is Our Foundation</h2>
-      <p class="section-sub light">Every operation is governed by international safety standards, rigorous protocols, and a zero-incident culture.</p>
+      <p class="section-sub light">Every dive begins with rigorous protocols, well-maintained equipment, and a zero-shortcuts culture.</p>
     </div>
     <div class="safety-grid">
       <div class="safety-card" data-aos="fade-up">
         <div class="safety-num">01</div>
-        <h3>ISO 45001 Certified</h3>
-        <p>Occupational health and safety management systems certified to international standards.</p>
+        <h3>Safety-First Culture</h3>
+        <p>Every dive begins with a full safety briefing and equipment check. No shortcuts, ever.</p>
       </div>
       <div class="safety-card" data-aos="fade-up" data-delay="100">
         <div class="safety-num">02</div>
-        <h3>Zero Tolerance HSE Policy</h3>
-        <p>No job is important enough to compromise the safety of our team, clients, or environment.</p>
+        <h3>Certified &amp; Trained Divers</h3>
+        <p>Our team holds PADI and SSI-aligned certifications, from Open Water to Divemaster and Helmet Diving.</p>
       </div>
       <div class="safety-card" data-aos="fade-up" data-delay="200">
         <div class="safety-num">03</div>
-        <h3>24/7 Emergency Response</h3>
-        <p>Round-the-clock emergency response teams and fully equipped onsite medical facilities.</p>
+        <h3>Modern Equipment Standards</h3>
+        <p>Regularly inspected, well-maintained gear from trusted brands like Aqualung, Mares, and Seac.</p>
       </div>
       <div class="safety-card" data-aos="fade-up" data-delay="300">
         <div class="safety-num">04</div>
-        <h3>Continuous Training</h3>
-        <p>Regular safety drills, refresher courses, and competency assessments for all personnel.</p>
+        <h3>Continuous Skill Development</h3>
+        <p>Ongoing training and refresher courses keep our divers sharp and ready for any operation.</p>
       </div>
     </div>
     <div class="certifications" data-aos="fade-up">
-      <div class="cert-item">ISO 9001:2015</div>
-      <div class="cert-item">ISO 45001:2018</div>
-      <div class="cert-item">ISO 14001:2015</div>
-      <div class="cert-item">IMCA Compliant</div>
-      <div class="cert-item">ADCI Certified</div>
+      <div class="cert-item">PADI Certified</div>
+      <div class="cert-item">SSI Compliant</div>
+      <div class="cert-item">Helmet Diving Certified</div>
+      <div class="cert-item">Industry Best Practices</div>
     </div>
   </div>
 </section>
@@ -381,132 +430,71 @@
 <section id="equipment" class="section equipment-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
-      <div class="section-tag">Our Fleet</div>
-      <h2 class="section-title">State-of-the-Art Equipment</h2>
-      <p class="section-sub">Advanced technology meets hands-on expertise for every marine operation.</p>
+      <h2 class="section-title">Equipment We Work With</h2>
+      <p class="section-sub">Well-maintained gear from trusted brands, matched to every kind of dive we run.</p>
     </div>
     <div class="equipment-grid">
       <div class="equip-card" data-aos="fade-up">
         <div class="equip-icon">🤿</div>
-        <h3>Diving Systems</h3>
-        <p>Surface supply, closed-bell saturation, and mixed gas diving systems up to 300m depth.</p>
+        <h3>Scuba Diving Systems</h3>
+        <p>Aqualung, Mares, and Seac BCDs and regulators for recreational, training, and commercial dives.</p>
       </div>
       <div class="equip-card" data-aos="fade-up">
-        <div class="equip-icon">🤖</div>
-        <h3>ROV Fleet</h3>
-        <p>Work-class and inspection-class ROVs equipped with HD cameras and manipulator arms.</p>
+        <div class="equip-icon">🚤</div>
+        <h3>Dive Boats &amp; Inflatables</h3>
+        <p>Rigid-hull and inflatable support boats for lake and reservoir dive operations.</p>
       </div>
       <div class="equip-card" data-aos="fade-up">
-        <div class="equip-icon">🚢</div>
-        <h3>Support Vessels</h3>
-        <p>DP2-class dive support vessels, barges, and fast crew transfer boats for offshore ops.</p>
+        <div class="equip-icon">🦺</div>
+        <h3>Safety &amp; Rescue Gear</h3>
+        <p>Life vests, safety lines, and emergency response equipment on every dive.</p>
       </div>
       <div class="equip-card" data-aos="fade-up">
-        <div class="equip-icon">🔬</div>
-        <h3>NDT Equipment</h3>
-        <p>Magnetic particle, ultrasonic, and radiographic testing equipment for structural inspection.</p>
+        <div class="equip-icon">📷</div>
+        <h3>Underwater Photography</h3>
+        <p>Cameras and video equipment for documentation, inspection reports, and tourism content.</p>
       </div>
       <div class="equip-card" data-aos="fade-up">
-        <div class="equip-icon">🏗️</div>
-        <h3>Lifting Systems</h3>
-        <p>Crane vessels, hydraulic jacking systems, and heavy-lift spreader frames.</p>
+        <div class="equip-icon">🌬️</div>
+        <h3>Air &amp; Gas Supply</h3>
+        <p>Compressors and cylinder fill stations to keep every tank mission-ready.</p>
       </div>
       <div class="equip-card" data-aos="fade-up">
-        <div class="equip-icon">📡</div>
-        <h3>Survey Equipment</h3>
-        <p>Multibeam sonar, ADCP systems, subsea positioning, and real-time 3D mapping.</p>
+        <div class="equip-icon">🧥</div>
+        <h3>Wetsuits &amp; Thermal Protection</h3>
+        <p>Full wetsuits and hoods suited to Rwanda's cool inland waters.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== GALLERY ========== -->
-<section class="section gallery-section">
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="section trust-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
-      <div class="section-tag">In Action</div>
-      <h2 class="section-title">Our Divers at Work</h2>
-      <p class="section-sub">World-class professionals operating in some of the most challenging underwater environments on the planet.</p>
+      <h2 class="section-title">Built on Trust, Trained for Depth</h2>
+      <p class="section-sub">What sets us apart as Rwanda's marine and diving specialists.</p>
     </div>
-    <div class="gallery-grid" data-aos="fade-up">
-      <div class="gallery-item gallery-wide">
-        <img src="assets/diver1.webp" alt="Divers underwater with marine life" />
-        <div class="gallery-caption">Underwater Operations · Gulf of Guinea</div>
+    <div class="trust-grid" data-aos="fade-up">
+      <div class="trust-card">
+        <div class="trust-icon">🛡️</div>
+        <h3>Safety First</h3>
+        <p>Your safety is our top priority on every single dive, no exceptions.</p>
       </div>
-      <div class="gallery-item">
-        <img src="assets/diver2.png" alt="Professional diver at surface" />
-        <div class="gallery-caption">Surface Operations</div>
+      <div class="trust-card">
+        <div class="trust-icon">🎓</div>
+        <h3>Certified Professionals</h3>
+        <p>Skilled, trained, and experienced divers holding PADI and SSI certifications.</p>
       </div>
-      <div class="gallery-item">
-        <img src="assets/diver3.webp" alt="Diver underwater" />
-        <div class="gallery-caption">Marine Academy Training</div>
+      <div class="trust-card">
+        <div class="trust-icon">🌍</div>
+        <h3>International Standards</h3>
+        <p>PADI/SSI compliant training and industry best practices in every operation.</p>
       </div>
-      <div class="gallery-item gallery-wide">
-        <img src="assets/hero-bg.webp" alt="Divers silhouette" />
-        <div class="gallery-caption">Deep Dive Operations · Red Sea</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== TESTIMONIALS ========== -->
-<section class="section testimonials-section">
-  <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <div class="section-tag">Testimonials</div>
-      <h2 class="section-title">What Our Clients Say</h2>
-    </div>
-    <div class="testimonials-slider" data-aos="fade-up">
-      <div class="testimonial-track" id="testimonialTrack">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"BlueDepth delivered our pipeline inspection project ahead of schedule with exceptional quality. Their ROV team is world-class."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background:#003B8E">JO</div>
-            <div>
-              <strong>James Okafor</strong>
-              <span>Operations Director, TotalEnergies</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"The salvage operation was complex and time-sensitive. BlueDepth managed it flawlessly, saving us millions in potential losses."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background:#0077CC">SR</div>
-            <div>
-              <strong>Sarah Reynolds</strong>
-              <span>Fleet Manager, Maersk Line</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Their Marine Academy gave our team the certifications and confidence to handle any underwater challenge. Highly recommended."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background:#001F4D">AM</div>
-            <div>
-              <strong>Ahmed Mansour</strong>
-              <span>HSE Manager, Saudi Aramco</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Professional, safe, and technically superior. BlueDepth is our go-to partner for all underwater construction works."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar" style="background:#5BC0EB">LC</div>
-            <div>
-              <strong>Laura Chen</strong>
-              <span>Project Manager, Shell Nigeria</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="slider-controls">
-        <button class="slider-btn" id="sliderPrev">←</button>
-        <div class="slider-dots" id="sliderDots"></div>
-        <button class="slider-btn" id="sliderNext">→</button>
+      <div class="trust-card">
+        <div class="trust-icon">🇷🇼</div>
+        <h3>Proudly Rwandan</h3>
+        <p>Founded and based in Kigali, growing marine expertise right here at home.</p>
       </div>
     </div>
   </div>
@@ -517,14 +505,13 @@
   <div class="container">
     <div class="careers-inner">
       <div class="careers-content" data-aos="fade-right">
-        <div class="section-tag">Join Our Team</div>
         <h2 class="section-title">Build Your Marine Career</h2>
-        <p>Join a world-class team of marine professionals committed to pushing the boundaries of underwater engineering. We offer competitive packages, continuous training, and international exposure.</p>
+        <p>Join a growing team of marine professionals committed to raising the standard for diving in Rwanda. We offer hands-on experience, continuous training, and room to grow with the company.</p>
         <ul class="careers-perks">
-          <li>✓ International project exposure</li>
-          <li>✓ Competitive salary & benefits</li>
-          <li>✓ Free certification programs</li>
-          <li>✓ Career advancement pathway</li>
+          <li>✓ Hands-on diving experience</li>
+          <li>✓ Ongoing certification support</li>
+          <li>✓ Kigali-based, close-knit team</li>
+          <li>✓ Room to grow with a young company</li>
         </ul>
         <a href="#contact" class="btn-primary">Apply Now</a>
       </div>
@@ -533,35 +520,35 @@
         <div class="job-list">
           <div class="job-item">
             <div class="job-info">
-              <strong>Senior Saturation Diver</strong>
-              <span>Offshore · Full-time</span>
+              <strong>Dive Instructor</strong>
+              <span>PADI/SSI · Kigali · Full-time</span>
             </div>
             <a href="#contact" class="job-apply">Apply</a>
           </div>
           <div class="job-item">
             <div class="job-info">
-              <strong>ROV Pilot/Technician</strong>
-              <span>Offshore · Full-time</span>
-            </div>
-            <a href="#contact" class="job-apply">Apply</a>
-          </div>
-          <div class="job-item">
-            <div class="job-info">
-              <strong>Marine Engineer</strong>
+              <strong>Divemaster / Assistant Instructor</strong>
               <span>Kigali · Full-time</span>
             </div>
             <a href="#contact" class="job-apply">Apply</a>
           </div>
           <div class="job-item">
             <div class="job-info">
-              <strong>HSE Supervisor</strong>
-              <span>Remote / Offshore</span>
+              <strong>Boat Operations &amp; Safety Crew</strong>
+              <span>Kigali · Full-time</span>
             </div>
             <a href="#contact" class="job-apply">Apply</a>
           </div>
           <div class="job-item">
             <div class="job-info">
-              <strong>Academy Instructor</strong>
+              <strong>Commercial Diver</strong>
+              <span>Underwater Inspection · Kigali</span>
+            </div>
+            <a href="#contact" class="job-apply">Apply</a>
+          </div>
+          <div class="job-item">
+            <div class="job-info">
+              <strong>Bookings &amp; Client Relations</strong>
               <span>Kigali · Full-time</span>
             </div>
             <a href="#contact" class="job-apply">Apply</a>
@@ -572,37 +559,37 @@
   </div>
 </section>
 
-<!-- ========== CLIENT PORTAL CTA ========== -->
-<section id="portal" class="section portal-section">
+<!-- ========== BOOK A DIVE CTA ========== -->
+<section id="book" class="section portal-section">
   <div class="container">
     <div class="portal-grid">
       <div class="portal-feature" data-aos="fade-up">
-        <div class="portal-icon">📊</div>
-        <h3>Project Tracking</h3>
-        <p>Real-time updates on your project progress, milestones, and reports.</p>
-      </div>
-      <div class="portal-feature" data-aos="fade-up">
-        <div class="portal-icon">🧾</div>
-        <h3>Invoices & Payments</h3>
-        <p>View, download, and pay invoices securely through the portal.</p>
-      </div>
-      <div class="portal-feature" data-aos="fade-up">
-        <div class="portal-icon">📜</div>
-        <h3>Certificates & Reports</h3>
-        <p>Access inspection reports, dive records, and safety certificates.</p>
+        <div class="portal-icon">🤿</div>
+        <h3>Commercial Diving</h3>
+        <p>Underwater inspection, surveys, and salvage &amp; recovery operations.</p>
       </div>
       <div class="portal-feature" data-aos="fade-up">
         <div class="portal-icon">🎓</div>
-        <h3>Marine Academy</h3>
-        <p>E-learning, course registration, exams, and certificate downloads.</p>
+        <h3>Dive Training</h3>
+        <p>PADI/SSI-aligned courses from Open Water to Divemaster.</p>
+      </div>
+      <div class="portal-feature" data-aos="fade-up">
+        <div class="portal-icon">🌊</div>
+        <h3>Marine Tourism</h3>
+        <p>Recreational dives, snorkeling, and guided excursions.</p>
+      </div>
+      <div class="portal-feature" data-aos="fade-up">
+        <div class="portal-icon">💬</div>
+        <h3>Fast Response</h3>
+        <p>Message us on WhatsApp for the quickest reply on bookings and quotes.</p>
       </div>
     </div>
     <div class="portal-cta" data-aos="fade-up">
-      <h2>Access Your Client Portal</h2>
-      <p>Manage projects, invoices, reports, and training — all in one place.</p>
+      <h2>Ready to Dive In?</h2>
+      <p>Whether it's a commercial job, a certification course, or your first recreational dive, let's talk.</p>
       <div class="portal-buttons">
-        <a href="#" class="btn-primary">Login to Portal</a>
-        <a href="#contact" class="btn-outline-white">Request Access</a>
+        <a href="https://wa.me/250788228943" target="_blank" rel="noopener" class="btn-primary">Message on WhatsApp</a>
+        <a href="#contact" class="btn-outline-white">Contact Us</a>
       </div>
     </div>
   </div>
@@ -614,7 +601,7 @@
     <div class="section-header" data-aos="fade-up">
       <div class="section-tag">Get In Touch</div>
       <h2 class="section-title">Contact BlueDepth</h2>
-      <p class="section-sub">Ready to discuss your marine project? Our team is available 24/7 for inquiries.</p>
+      <p class="section-sub">Ready to discuss your diving project or booking? Our team is ready to help.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info" data-aos="fade-right">
@@ -622,36 +609,35 @@
           <div class="info-icon">📍</div>
           <div>
             <strong>Head Office</strong>
-            <p>KG 11 Ave, Kigali<br/>Rwanda, East Africa</p>
+            <p>Kigali, Rwanda</p>
           </div>
         </div>
         <div class="info-card">
           <div class="info-icon">📞</div>
           <div>
             <strong>Phone</strong>
-            <p>+250 788 228 943<br/>Available Mon–Sat, 8am–6pm</p>
+            <p>+250 788 228 943</p>
           </div>
         </div>
         <div class="info-card">
           <div class="info-icon">✉️</div>
           <div>
             <strong>Email</strong>
-            <p>info@bluedepthmarine.com<br/>projects@bluedepthmarine.com</p>
+            <p>info@bluedepthmarine.com</p>
           </div>
         </div>
         <div class="info-card">
-          <div class="info-icon">🕒</div>
+          <div class="info-icon">🌐</div>
           <div>
-            <strong>Emergency Line</strong>
-            <p>+250 788 228 943 (24/7)</p>
+            <strong>Website</strong>
+            <p>bluedepthmarine.com</p>
           </div>
         </div>
         <div class="social-links">
           <a href="#" class="social-btn" title="LinkedIn">in</a>
           <a href="#" class="social-btn" title="Facebook">f</a>
-          <a href="#" class="social-btn" title="YouTube">▶</a>
+          <a href="#" class="social-btn" title="Instagram">ig</a>
           <a href="https://wa.me/250788228943" target="_blank" rel="noopener" class="social-btn whatsapp" title="WhatsApp">W</a>
-          <a href="https://github.com/Ihame/bluedepth" target="_blank" rel="noopener" class="social-btn" title="GitHub">GH</a>
         </div>
       </div>
       <form class="contact-form" data-aos="fade-left" id="contactForm">
@@ -662,7 +648,7 @@
           </div>
           <div class="form-group">
             <label>Company</label>
-            <input type="text" placeholder="Your Company" />
+            <input type="text" placeholder="Your Company (optional)" />
           </div>
         </div>
         <div class="form-row">
@@ -672,7 +658,7 @@
           </div>
           <div class="form-group">
             <label>Phone</label>
-            <input type="tel" placeholder="+1 234 567 8900" />
+            <input type="tel" placeholder="+250 78X XXX XXX" />
           </div>
         </div>
         <div class="form-group">
@@ -680,19 +666,19 @@
           <select>
             <option value="">Select a service...</option>
             <option>Underwater Inspection</option>
-            <option>Marine Construction</option>
-            <option>Salvage & Recovery</option>
-            <option>Marine Academy</option>
-            <option>Safety Consultancy</option>
-            <option>Equipment Rental</option>
+            <option>Marine &amp; Hydrographic Surveys</option>
+            <option>Salvage &amp; Recovery</option>
+            <option>Scuba Diving Courses</option>
+            <option>Corporate Water Safety Training</option>
+            <option>Recreational Diving / Snorkeling</option>
           </select>
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea rows="5" placeholder="Describe your project requirements..."></textarea>
+          <textarea rows="5" placeholder="Describe your project or booking requirements..."></textarea>
         </div>
         <button type="submit" class="btn-primary full-width">Send Message →</button>
-        <p class="form-note">We typically respond within 2 business hours.</p>
+        <p class="form-note">Prefer instant reply? <a href="https://wa.me/250788228943" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">Message us on WhatsApp</a> instead.</p>
       </form>
     </div>
   </div>
@@ -708,40 +694,39 @@
             <span class="logo-blue">Blue</span><span style="color:white">Depth</span>
             <span class="footer-logo-sub">Marine Group</span>
           </div>
-          <p>International-standard marine services company based in Kigali, Rwanda, delivering underwater engineering excellence across East Africa and beyond.</p>
+          <p>Commercial diving, professional dive training, and marine tourism, based in Kigali, Rwanda.</p>
           <div class="footer-social">
-            <a href="#">in</a><a href="#">f</a><a href="#">▶</a>
-            <a href="https://github.com/Ihame/bluedepth" target="_blank" rel="noopener" title="GitHub">GH</a>
+            <a href="#" title="LinkedIn">in</a><a href="#" title="Facebook">f</a><a href="#" title="Instagram">ig</a>
+            <a href="https://wa.me/250788228943" target="_blank" rel="noopener" title="WhatsApp">W</a>
           </div>
         </div>
         <div class="footer-links">
           <h4>Services</h4>
           <ul>
             <li><a href="#services">Underwater Inspection</a></li>
-            <li><a href="#services">Marine Construction</a></li>
-            <li><a href="#services">Salvage & Recovery</a></li>
-            <li><a href="#services">Marine Academy</a></li>
-            <li><a href="#services">Safety Consultancy</a></li>
+            <li><a href="#services">Marine &amp; Hydrographic Surveys</a></li>
+            <li><a href="#services">Salvage &amp; Recovery</a></li>
+            <li><a href="#services">Dive Training</a></li>
+            <li><a href="#services">Marine Tourism</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#safety">Safety & Quality</a></li>
-            <li><a href="#equipment">Equipment</a></li>
+            <li><a href="#team">Leadership</a></li>
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="#safety">Safety &amp; Quality</a></li>
             <li><a href="#careers">Careers</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Quick Access</h4>
           <ul>
-            <li><a href="#portal">Client Portal</a></li>
-            <li><a href="#portal">Marine Academy</a></li>
-            <li><a href="#contact">Request Quote</a></li>
-            <li><a href="#contact">Emergency Line</a></li>
-            <li><a href="#contact">Investors</a></li>
+            <li><a href="#book">Book a Dive</a></li>
+            <li><a href="#contact">Request a Quote</a></li>
+            <li><a href="https://wa.me/250788228943" target="_blank" rel="noopener">WhatsApp Us</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -749,7 +734,7 @@
   </div>
   <div class="footer-bottom">
     <div class="container">
-      <p>© 2025 BlueDepth Marine Group Ltd. All rights reserved.</p>
+      <p>© 2026 BlueDepth Marine Group Ltd. All rights reserved.</p>
       <div class="footer-legal">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
@@ -761,6 +746,11 @@
 
 <!-- Back to top -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/250788228943" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Message us on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.13-.43-4.45-1.24l-.32-.19-3.31.87.89-3.22-.21-.33A7.94 7.94 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.29-5.79c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.53.12-.15.23-.6.76-.74.92-.14.15-.27.17-.5.06-.23-.12-.98-.36-1.87-1.15-.69-.62-1.16-1.38-1.29-1.61-.14-.23-.01-.36.11-.47.11-.11.23-.28.35-.42.11-.14.15-.23.23-.39.08-.15.04-.29-.02-.41-.06-.12-.53-1.28-.73-1.75-.19-.46-.39-.4-.53-.4-.14 0-.29-.02-.45-.02-.15 0-.41.06-.62.29-.21.23-.82.8-.82 1.94 0 1.15.84 2.26.95 2.41.12.15 1.65 2.52 4 3.53.56.24 1 .38 1.34.49.56.18 1.08.15 1.48.09.45-.07 1.38-.56 1.58-1.11.19-.54.19-1 .13-1.11-.06-.1-.21-.16-.44-.28z"/></svg>
+</a>
 
 <script src="script.js"></script>
 </body>

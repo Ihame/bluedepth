@@ -25,7 +25,7 @@ const aosObserver = new IntersectionObserver((entries) => {
   entries.forEach(el => {
     if (el.isIntersecting) {
       const delay = el.target.dataset.delay || '0';
-      setTimeout(() => el.target.classList.add('aos-animate'), parseFloat(delay) * 1000);
+      setTimeout(() => el.target.classList.add('aos-animate'), parseFloat(delay));
     }
   });
 }, { threshold: 0.12 });
@@ -74,42 +74,67 @@ filterBtns.forEach(btn => {
   });
 });
 
-/* ========== TESTIMONIAL SLIDER ========== */
-const track = document.getElementById('testimonialTrack');
-const dotsContainer = document.getElementById('sliderDots');
-if (track) {
-  const cards = track.querySelectorAll('.testimonial-card');
-  let perView = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-  let current = 0;
-  const total = cards.length;
-  const maxIndex = Math.max(0, total - perView);
+/* ========== SCROLL PROGRESS BAR ========== */
+const scrollProgress = document.getElementById('scrollProgress');
+if (scrollProgress) {
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    scrollProgress.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+  });
+}
 
-  // Create dots
-  for (let i = 0; i <= maxIndex; i++) {
-    const dot = document.createElement('div');
-    dot.className = 'dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => goTo(i));
-    dotsContainer.appendChild(dot);
+/* ========== TILT ON HOVER ========== */
+document.querySelectorAll('.tilt').forEach(el => {
+  el.addEventListener('mousemove', (e) => {
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    el.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
+  });
+  el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+});
+
+/* ========== LIGHTBOX ========== */
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxItems = Array.from(document.querySelectorAll('.project-card'));
+  let lightboxIndex = 0;
+
+  function openLightbox(idx) {
+    lightboxIndex = idx;
+    const card = lightboxItems[idx];
+    const img = card.querySelector('.project-img img');
+    const title = card.querySelector('.project-info h3');
+    if (!img) return;
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = title ? title.textContent : '';
+    lightbox.classList.add('open');
+  }
+  function closeLightbox() { lightbox.classList.remove('open'); }
+  function showRelative(delta) {
+    let idx = lightboxIndex;
+    const visible = lightboxItems.filter(c => c.style.display !== 'none');
+    let pos = visible.indexOf(lightboxItems[idx]);
+    pos = (pos + delta + visible.length) % visible.length;
+    openLightbox(lightboxItems.indexOf(visible[pos]));
   }
 
-  function goTo(idx) {
-    current = Math.max(0, Math.min(idx, maxIndex));
-    const cardWidth = cards[0].offsetWidth + 24;
-    track.style.transform = `translateX(-${current * cardWidth}px)`;
-    dotsContainer.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
-  }
-
-  document.getElementById('sliderPrev').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('sliderNext').addEventListener('click', () => goTo(current + 1));
-
-  // Auto slide
-  let autoplay = setInterval(() => goTo(current < maxIndex ? current + 1 : 0), 4000);
-  track.addEventListener('mouseenter', () => clearInterval(autoplay));
-  track.addEventListener('mouseleave', () => { autoplay = setInterval(() => goTo(current < maxIndex ? current + 1 : 0), 4000); });
-
-  window.addEventListener('resize', () => {
-    perView = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-    goTo(0);
+  lightboxItems.forEach((card, idx) => {
+    card.querySelector('.project-img').addEventListener('click', () => openLightbox(idx));
+  });
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', () => showRelative(-1));
+  document.getElementById('lightboxNext').addEventListener('click', () => showRelative(1));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showRelative(-1);
+    if (e.key === 'ArrowRight') showRelative(1);
   });
 }
 
