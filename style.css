@@ -1,9 +1,9 @@
 /* ========== VARIABLES ========== */
 :root {
   --navy: #001F4D;
-  --royal: #003B8E;
-  --blue: #0077CC;
-  --sky: #5BC0EB;
+  --royal: #002B6F;
+  --blue: #0068BF;
+  --sky: #34B2EC;
   --white: #ffffff;
   --light: #f0f6ff;
   --gray: #6b7280;
@@ -90,6 +90,16 @@ ul { list-style: none; }
 }
 .btn-outline-white:hover { background: white; color: var(--navy); }
 
+/* ========== SKIP LINK ========== */
+.skip-link {
+  position: absolute; top: -60px; left: 16px; z-index: 1300;
+  background: white; color: var(--navy);
+  padding: 12px 20px; border-radius: 8px;
+  font-weight: 700; font-size: 0.9rem;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 16px; }
+
 /* ========== NAVBAR ========== */
 #navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -104,8 +114,8 @@ ul { list-style: none; }
 }
 .nav-inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo { display: flex; align-items: center; gap: 10px; }
-.logo img { height: 44px; width: auto; }
-.logo-text { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; }
+.logo img { height: 40px; width: auto; }
+.logo-text { font-family: var(--font-head); font-size: 1.45rem; font-weight: 800; letter-spacing: -0.01em; }
 .logo-blue { color: var(--sky); }
 .logo-dark { color: white; }
 .nav-links { display: flex; align-items: center; gap: 4px; }
@@ -257,7 +267,7 @@ ul { list-style: none; }
 .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
 .service-card:hover::before { transform: scaleX(1); }
 .featured-card { background: linear-gradient(160deg, var(--navy) 0%, var(--royal) 100%); border-color: transparent; color: white; }
-.featured-card h3, .featured-card p { color: white; }
+.service-card.featured-card h3, .service-card.featured-card p { color: white; }
 .featured-card p { opacity: 0.8; }
 .featured-ribbon {
   position: absolute; top: 20px; right: -10px;
@@ -395,25 +405,25 @@ ul { list-style: none; }
 .careers-perks { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
 .careers-perks li { color: var(--navy); font-weight: 500; font-size: 0.95rem; }
 .careers-jobs h3 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 24px; }
-.job-list { display: flex; flex-direction: column; gap: 12px; }
-.job-item {
-  display: flex; align-items: center; justify-content: space-between;
+.no-jobs {
   background: var(--light);
-  border-radius: 12px;
-  padding: 18px 22px;
-  border: 1px solid rgba(0,31,77,0.06);
+  border: 1px dashed rgba(0,31,77,0.18);
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+}
+.no-jobs p { color: var(--gray); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+.btn-outline-navy {
+  display: inline-block;
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  padding: 11px 26px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
   transition: var(--transition);
 }
-.job-item:hover { border-color: rgba(0,119,204,0.25); background: rgba(0,119,204,0.04); }
-.job-info strong { display: block; font-size: 0.92rem; color: var(--navy); margin-bottom: 3px; }
-.job-info span { font-size: 0.8rem; color: var(--gray); }
-.job-apply {
-  background: var(--navy); color: white;
-  padding: 7px 18px; border-radius: 100px;
-  font-size: 0.8rem; font-weight: 600;
-  transition: var(--transition); white-space: nowrap;
-}
-.job-apply:hover { background: var(--blue); }
+.btn-outline-navy:hover { background: var(--navy); color: white; }
 
 /* ========== PORTAL ========== */
 .portal-section {
@@ -491,13 +501,10 @@ ul { list-style: none; }
 .footer-top { padding: 72px 0 48px; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; }
 .footer-logo {
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 800;
-  display: flex; align-items: center; gap: 4px;
-  flex-wrap: wrap;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   margin-bottom: 16px;
 }
+.footer-logo img { height: 40px; width: auto; }
 .footer-logo-sub { display: block; width: 100%; font-size: 0.7rem; color: rgba(255,255,255,0.4); letter-spacing: 0.2em; text-transform: uppercase; margin-top: -4px; }
 .footer-brand p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 280px; margin-bottom: 24px; }
 .footer-social { display: flex; gap: 10px; }

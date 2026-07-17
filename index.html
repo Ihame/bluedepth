@@ -8,12 +8,14 @@
   <meta property="og:title" content="BlueDepth Marine Group Ltd" />
   <meta property="og:description" content="Commercial diving, professional dive training, and marine tourism in Kigali, Rwanda." />
   <meta property="og:image" content="assets/hero-real.jpg" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <!-- ========== SCROLL PROGRESS ========== -->
 <div class="scroll-progress" id="scrollProgress"></div>
@@ -22,10 +24,8 @@
 <header id="navbar">
   <div class="nav-inner">
     <a href="#home" class="logo">
-      <img src="assets/logo.svg" alt="BlueDepth Marine Group" />
-      <span class="logo-text" style="display:none">
-        <span class="logo-blue">Blue</span><span class="logo-dark">Depth</span>
-      </span>
+      <img src="assets/favicon-icon.png" alt="" />
+      <span class="logo-text"><span class="logo-blue">Blue</span><span class="logo-dark">Depth</span></span>
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
@@ -44,6 +44,7 @@
   </div>
 </header>
 
+<main id="main">
 <!-- ========== HERO ========== -->
 <section id="home" class="hero">
   <div class="hero-video-bg">
@@ -381,7 +382,7 @@
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
   <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">←</button>
-  <img src="" alt="" id="lightboxImg" />
+  <img alt="" id="lightboxImg" />
   <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">→</button>
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
@@ -517,42 +518,9 @@
       </div>
       <div class="careers-jobs" data-aos="fade-left">
         <h3>Open Positions</h3>
-        <div class="job-list">
-          <div class="job-item">
-            <div class="job-info">
-              <strong>Dive Instructor</strong>
-              <span>PADI/SSI · Kigali · Full-time</span>
-            </div>
-            <a href="#contact" class="job-apply">Apply</a>
-          </div>
-          <div class="job-item">
-            <div class="job-info">
-              <strong>Divemaster / Assistant Instructor</strong>
-              <span>Kigali · Full-time</span>
-            </div>
-            <a href="#contact" class="job-apply">Apply</a>
-          </div>
-          <div class="job-item">
-            <div class="job-info">
-              <strong>Boat Operations &amp; Safety Crew</strong>
-              <span>Kigali · Full-time</span>
-            </div>
-            <a href="#contact" class="job-apply">Apply</a>
-          </div>
-          <div class="job-item">
-            <div class="job-info">
-              <strong>Commercial Diver</strong>
-              <span>Underwater Inspection · Kigali</span>
-            </div>
-            <a href="#contact" class="job-apply">Apply</a>
-          </div>
-          <div class="job-item">
-            <div class="job-info">
-              <strong>Bookings &amp; Client Relations</strong>
-              <span>Kigali · Full-time</span>
-            </div>
-            <a href="#contact" class="job-apply">Apply</a>
-          </div>
+        <div class="no-jobs">
+          <p>No open positions right now. We're a small, growing team, if that changes we'll list roles here.</p>
+          <a href="#contact" class="btn-outline-navy">Send a General Application</a>
         </div>
       </div>
     </div>
@@ -634,36 +602,38 @@
           </div>
         </div>
         <div class="social-links">
-          <a href="#" class="social-btn" title="LinkedIn">in</a>
-          <a href="#" class="social-btn" title="Facebook">f</a>
-          <a href="#" class="social-btn" title="Instagram">ig</a>
-          <a href="https://wa.me/250788228943" target="_blank" rel="noopener" class="social-btn whatsapp" title="WhatsApp">W</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="https://wa.me/250788228943" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">W</a>
         </div>
       </div>
-      <form class="contact-form" data-aos="fade-left" id="contactForm">
+      <form class="contact-form" data-aos="fade-left" id="contactForm" action="https://formsubmit.co/ajax/info@bluedepthmarine.com" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from bluedepthmarine.com" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="form-row">
           <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="John Smith" required />
+            <label for="cf-name">Full Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="John Smith" required />
           </div>
           <div class="form-group">
-            <label>Company</label>
-            <input type="text" placeholder="Your Company (optional)" />
+            <label for="cf-company">Company</label>
+            <input type="text" id="cf-company" name="company" placeholder="Your Company (optional)" />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="john@company.com" required />
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" placeholder="john@company.com" required />
           </div>
           <div class="form-group">
-            <label>Phone</label>
-            <input type="tel" placeholder="+250 78X XXX XXX" />
+            <label for="cf-phone">Phone</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="+250 78X XXX XXX" />
           </div>
         </div>
         <div class="form-group">
-          <label>Service Required</label>
-          <select>
+          <label for="cf-service">Service Required</label>
+          <select id="cf-service" name="service">
             <option value="">Select a service...</option>
             <option>Underwater Inspection</option>
             <option>Marine &amp; Hydrographic Surveys</option>
@@ -674,15 +644,16 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Message</label>
-          <textarea rows="5" placeholder="Describe your project or booking requirements..."></textarea>
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" placeholder="Describe your project or booking requirements..." required></textarea>
         </div>
         <button type="submit" class="btn-primary full-width">Send Message →</button>
-        <p class="form-note">Prefer instant reply? <a href="https://wa.me/250788228943" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">Message us on WhatsApp</a> instead.</p>
+        <p class="form-note" id="formStatus">Prefer instant reply? <a href="https://wa.me/250788228943" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">Message us on WhatsApp</a> instead.</p>
       </form>
     </div>
   </div>
 </section>
+</main>
 
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
@@ -691,13 +662,14 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <span class="logo-blue">Blue</span><span style="color:white">Depth</span>
+            <img src="assets/favicon-icon.png" alt="" />
+            <span class="logo-text"><span class="logo-blue">Blue</span><span class="logo-dark">Depth</span></span>
             <span class="footer-logo-sub">Marine Group</span>
           </div>
           <p>Commercial diving, professional dive training, and marine tourism, based in Kigali, Rwanda.</p>
           <div class="footer-social">
-            <a href="#" title="LinkedIn">in</a><a href="#" title="Facebook">f</a><a href="#" title="Instagram">ig</a>
-            <a href="https://wa.me/250788228943" target="_blank" rel="noopener" title="WhatsApp">W</a>
+            <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a>
+            <a href="https://wa.me/250788228943" target="_blank" rel="noopener" aria-label="WhatsApp">W</a>
           </div>
         </div>
         <div class="footer-links">

@@ -141,17 +141,35 @@ if (lightbox) {
 /* ========== CONTACT FORM ========== */
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  const statusNote = document.getElementById('formStatus');
+  const statusDefault = statusNote.innerHTML;
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const orig = btn.textContent;
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.style.background = '';
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
+      if (!res.ok) throw new Error('Request failed');
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
       form.reset();
-    }, 3500);
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3500);
+    } catch (err) {
+      btn.textContent = orig;
+      btn.disabled = false;
+      statusNote.innerHTML = 'Could not send right now. Please message us on <a href="https://wa.me/250788228943" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">WhatsApp</a> or email info@bluedepthmarine.com directly.';
+      setTimeout(() => { statusNote.innerHTML = statusDefault; }, 6000);
+    }
   });
 }
 
