@@ -702,28 +702,29 @@ ul { list-style: none; }
 
 .staff-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 .staff-card {
   background: var(--light);
   border: 1px solid rgba(0,31,77,0.06);
-  border-radius: 16px;
-  padding: 20px 14px 18px;
+  border-radius: 18px;
+  padding: 28px 20px 24px;
   text-align: center;
   transition: var(--transition);
 }
-.staff-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+.staff-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: rgba(0,119,204,0.2); }
 .staff-card img {
-  width: 76px; height: 76px;
+  width: 96px; height: 96px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  margin: 0 auto 12px;
+  margin: 0 auto 16px;
   border: 3px solid white;
   box-shadow: var(--shadow);
 }
-.staff-card h4 { font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: var(--navy); line-height: 1.3; }
+.staff-card h4 { font-family: var(--font-head); font-size: 0.98rem; font-weight: 700; color: var(--navy); line-height: 1.3; }
+.staff-card .team-role { margin: 4px 0 0; font-size: 0.8rem; }
 
 @media (max-width: 1024px) {
   .leadership-grid { grid-template-columns: 1fr; }
