@@ -402,15 +402,16 @@ ul { list-style: none; }
   background: white;
   border: 1px solid rgba(0,31,77,0.08);
   border-radius: 16px;
-  padding: 20px 40px;
+  padding: 18px 36px;
   box-shadow: var(--shadow);
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 1.2rem;
-  letter-spacing: 0.03em;
-  color: var(--navy);
-  white-space: nowrap;
   transition: var(--transition);
+  height: 96px;
+}
+.marquee-item img {
+  height: 100%;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
 }
 .marquee-item:hover { border-color: rgba(0,119,204,0.25); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
 @keyframes marqueeScroll {
